@@ -1,0 +1,101 @@
+header {
+  position: fixed;
+  z-index: 2;
+  width: 150px;
+  height: 100%;
+  background-color: #ccc;
+}
+header a{
+  color: #fff;
+}
+header .inner {
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+header .inner h1 {
+  /*! position: absolute; */
+  /*! top: 0; */
+  /*! left: calc(50% - 150px); */
+  /*! width: 300px; */
+  /*! text-align: center; */
+  order: 1;
+  /*! align-self: flex-start; */
+}
+header .inner h1 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0;
+}
+header .inner h1 a img{
+  display: block;
+  transform: translateY(-12px);
+  filter: brightness(100);
+}
+header .inner .wgnb{
+  order: 2;
+  align-self: flex-start;
+  padding-left: 20px;
+  width: 700px;
+}
+header .inner .wgnb a.ham {
+  
+  font-size: 0;
+  width: 36px;
+  height: 36px;
+  display: block;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+header .inner .wgnb a.ham::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  
+}
+header .inner .wgnb ul.gnb {
+  
+}
+header .inner .wgnb ul.gnb > li {
+  
+  display: flex;
+}
+header .inner .wgnb ul.gnb > li h2 {
+  
+  width: 130px;
+}
+header .inner .wgnb ul.gnb > li h2 a {
+  
+  padding: 10px 0;
+  display: block;
+}
+header .inner .wgnb ul.gnb > li ul.gnbsub {
+  
+  display: flex;
+  gap: 30px;
+}
+header .inner .wgnb ul.gnb > li ul.gnbsub li {
+  
+}
+header .inner .wgnb ul.gnb > li ul.gnbsub li a {
+  
+  padding: 10px 0;
+  display: block;
+}
+header .inner ul.enb {
+  order: 3;
+}
+header .inner ul.enb li {
+  
+  margin-top: 10px;
+}
+header .inner ul.enb li a {
+  color: black;
+}

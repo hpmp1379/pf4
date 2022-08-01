@@ -1,0 +1,169 @@
+#title {
+  height: 100%;
+  background-color: #eee;
+  min-height: 480px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: 150px;
+  width: calc(100% - 150px);
+  /*! margin-left: 150px; */
+}
+#title::before{
+  content:"";
+  display: block;
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  background-color: black;
+}
+/* #title::after{
+  content: "KEEP CLEAN & GREEN";
+  font-weight: 700;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(90deg);
+} */
+#title .inner {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+#title .inner h2.h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 65px;
+  margin-bottom: 20px;
+  overflow: hidden;
+/*   animation-delay: 1s; */
+}
+#title .inner h2 span{
+  display: block;
+  animation-name: h2up;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+@keyframes h2up{
+  0%{
+    transform: translateY(0%);
+      opacity: 1;
+  }
+  100%{
+    transform: translateY(100%);
+    opacity: 0.4;
+  }
+}
+#title .inner p.p {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  overflow: hidden;
+}
+#title .inner p span{
+  display: block;
+  animation-name: pup;
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+@keyframes pup{
+  0%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  10%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(100%);
+    opacity: 0.1;
+  }
+}
+#title .inner p.p span.br {
+}
+#title .inner iframe{
+  width: 1200px;
+  height: 670px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+/*   transform: scale(0.5);
+  transform-origin: 100% 100%; */
+}
+#title span.titleaside{
+  position: absolute;
+  right: calc(20% / 4 - 82px);
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  justify-content: space-between;
+  width: 164px;
+}
+#title span.titleaside a.campaign{
+  transform: rotate(90deg) translateX(80px);
+  font-weight: 700;
+}
+#title span.titleaside a.scroll{
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+}
+#title span.titleaside a.scroll::before{
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-left: transparent;
+  border-top: transparent;
+  transform: scale(0.5) translateY(-15px) rotate(45deg);
+  margin: 0 auto;
+  animation-name: autoScroll2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  color: #333;
+  position: absolute;
+  top: -20px;
+  left: 18.017px;
+  opacity: 0;
+}
+#title span.titleaside a.scroll::after{
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-left: transparent;
+  border-top: transparent;
+  transform: scale(0.5) translateY(-15px) rotate(45deg);
+  margin: 0 auto;
+  color: #333;
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 7.5px);
+  opacity: 0;
+  animation-name: autoScroll1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes autoScroll1{
+  10%{opacity: 1;}
+  100%{opacity: 0;}
+}
+@keyframes autoScroll2{
+  10%{opacity: 0;}
+  20%{opacity: 1;}
+  100%{opacity: 0;}
+}
